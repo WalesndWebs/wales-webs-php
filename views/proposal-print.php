@@ -1,0 +1,10 @@
+<?php $p = $printProposal; $cur = $p['currency']; $printTotal = 0; ?>
+<article class="proposal-print" data-testid="section-print-proposal"><header><strong>Wales &amp; Webs</strong><span>Usabime · Project proposal</span></header>
+<p class="print-ref">PROPOSAL FOR <?= e(strtoupper($request['business_name'])) ?> · <?= e($request['reference']) ?></p><h1><?= e($p['title']) ?></h1>
+<div class="print-meta"><div><span>Prepared for</span><strong><?= e($request['full_name']) ?><br><?= e($request['business_name']) ?></strong></div><div><span>Prepared</span><strong><?= e(substr($p['updated_at'], 0, 10)) ?></strong></div><?php if ($p['valid_until']): ?><div><span>Valid until</span><strong><?= e($p['valid_until']) ?></strong></div><?php endif; ?></div>
+<?php foreach (['introduction' => 'Introduction', 'scope' => 'Scope of work'] as $key => $label): if ($p[$key]): ?><section><h2><?= $label ?></h2><p class="preserve"><?= e($p[$key]) ?></p></section><?php endif; endforeach; ?>
+<section><h2>Investment</h2><table><thead><tr><th>Description</th><th>Qty</th><th>Unit price</th><th>Amount</th></tr></thead><tbody>
+<?php foreach ($p['line_items'] as $item): $amount = cents($item['unitPrice']) * $item['quantity']; $printTotal += $amount; ?><tr><td><?= e($item['description']) ?></td><td><?= e($item['quantity']) ?></td><td><?= e($cur) ?> <?= format_money(cents($item['unitPrice'])) ?></td><td><?= e($cur) ?> <?= format_money($amount) ?></td></tr><?php endforeach; ?>
+</tbody><tfoot><tr><td colspan="3">Total</td><td><?= e($cur) ?> <?= format_money($printTotal) ?></td></tr></tfoot></table></section>
+<?php foreach (['timeline' => 'Timeline', 'payment_terms' => 'Payment terms', 'terms' => 'Terms and conditions'] as $key => $label): if ($p[$key]): ?><section><h2><?= $label ?></h2><p class="preserve"><?= e($p[$key]) ?></p></section><?php endif; endforeach; ?>
+<footer><span>Prepared by Wales &amp; Webs</span><span><?= e($request['reference']) ?></span></footer></article>

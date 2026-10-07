@@ -1,0 +1,1 @@
+<main class="container page-heading"><p class="eyebrow">Wales &amp; Webs</p><h1><?= e($pageTitle) ?></h1><p class="muted"><?= e($message) ?></p><a class="button" href="<?= e(url('/')) ?>">Return home</a></main>

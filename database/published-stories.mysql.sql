@@ -1,0 +1,25 @@
+-- Published Wales & Webs Journal stories only. No private customer records.
+SET NAMES utf8mb4;
+SET sql_mode = 'NO_BACKSLASH_ESCAPES';
+START TRANSACTION;
+INSERT INTO blog_posts (id,slug,title,client_name,category,excerpt,body,services,accent,status,featured,published_at,created_at,updated_at) VALUES (1,'carolines-place-from-beauty-brand-to-bookable-business','From a beautiful idea to a bookable business','Caroline''s Place','Beauty & Wellness','How we helped a premium beauty and wellness brand turn its online presence into a clearer customer journey with booking and POS support.','Caroline''s Place already had the care, skill and reputation that makes a beauty brand memorable. What was missing was a digital experience that made the next step obvious for a new customer.
+
+We shaped the website around the real booking journey: understand the service, trust the brand, choose a time and arrive prepared. The work brought the brand story, service details, booking system and POS workflow into one calmer experience.
+
+The result is a stronger first impression and a simpler way for customers to move from interest to appointment. The team now has a digital foundation that can keep growing with the business.','["Website design","Booking system","POS support"]','amber','published',1,'2025-02-14 09:00:00','2026-10-04 11:11:43','2026-10-04 11:11:43');
+INSERT INTO blog_posts (id,slug,title,client_name,category,excerpt,body,services,accent,status,featured,published_at,created_at,updated_at) VALUES (2,'prodigy-group-a-clearer-digital-home-for-a-growing-team','A clearer digital home for a growing team','Prodigy Group','Professional Services','A bold website and central client portal gave Prodigy Group a more confident way to explain its offer and run client work.','As Prodigy Group grew, its digital presence needed to do more than look professional. It needed to help different people understand the group quickly and give existing clients a more organised place to work with the team.
+
+We built a confident online home with clearer messaging, a stronger service structure and a central client portal. Behind the scenes, automation reduced the amount of repeated admin needed to keep conversations and work moving.
+
+The team now has a site that represents where the company is going, not just where it started. The portal also gives clients a more dependable experience after the first enquiry.','["Website design","Client portal","Automation"]','violet','published',0,'2025-04-08 09:00:00','2026-10-04 11:11:43','2026-10-04 11:11:43');
+INSERT INTO blog_posts (id,slug,title,client_name,category,excerpt,body,services,accent,status,featured,published_at,created_at,updated_at) VALUES (3,'taste-by-edima-turning-a-food-brand-into-an-online-experience','Turning a food brand into an online experience','Taste by Edima','Food & Hospitality','We helped Taste by Edima bring its personality, products and social presence together so more people could discover and order with confidence.','Taste by Edima had the kind of food people remember, but the online experience did not yet carry the same warmth. Customers needed an easier way to discover the brand, understand the offer and take the next step.
+
+We connected the website, e-commerce journey and social media direction around one clear story. Product presentation became easier to scan, the brand voice became more consistent and content ideas were shaped around the moments customers already care about.
+
+The work gave Taste by Edima a stronger platform for repeat visibility and online sales. It also made future campaigns easier to plan because every channel now points back to the same brand experience.','["Website design","E-commerce","Social media"]','pink','published',0,'2025-06-20 09:00:00','2026-10-04 11:11:43','2026-10-04 11:11:43');
+INSERT INTO blog_posts (id,slug,title,client_name,category,excerpt,body,services,accent,status,featured,published_at,created_at,updated_at) VALUES (4,'printmadeasy-making-custom-printing-easier-to-buy-online','Making custom printing easier to buy online','Printmadeasy','E-commerce','A simpler online store and search-friendly content helped Printmadeasy make custom printing easier for customers to understand and order.','Custom printing can become complicated quickly: customers have questions about sizes, finishes, quantities, timelines and what happens after they place an order. Printmadeasy needed a storefront that made those decisions feel simpler.
+
+We focused on a fast shopping experience, clearer product information and an SEO structure that helps the right customers find the store. The design keeps attention on the work customers want done while giving them enough guidance to make confident choices.
+
+Printmadeasy now has a more useful digital shopfront: easier to browse, easier to explain and better prepared to turn search traffic into real conversations and orders.','["E-commerce","SEO","Storefront design"]','green','published',0,'2025-08-12 09:00:00','2026-10-04 11:11:43','2026-10-04 11:11:43');
+COMMIT;
